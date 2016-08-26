@@ -30,7 +30,7 @@ class ViewController: UIViewController
 
     @IBAction func buttonPressed(_ sender: AnyObject)
     {
-        
+        helloWorldLabel.text = "\(Double(textOne.text!)! + Double(textTwo.text!)!)"
     }
     
  
