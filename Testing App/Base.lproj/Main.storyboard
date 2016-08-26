@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -23,24 +24,47 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hpV-nh-Cno">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="R7t-Je-HmW"/>
+                                    <constraint firstAttribute="width" constant="97" id="iih-YU-4M3"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GZj-gB-eE5">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Zgq-mT-ZGk"/>
+                                    <constraint firstAttribute="width" constant="97" id="u70-km-9nk"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QMf-cO-acR">
-                                <state key="normal" title="Change Hello World"/>
+                                <state key="normal" title="Equal"/>
                                 <connections>
-                                    <action selector="helloButonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rx5-39-57z"/>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KtL-SL-goX"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="GZj-gB-eE5" firstAttribute="top" secondItem="qFr-RB-tWO" secondAttribute="bottom" constant="146.5" id="B0J-OT-qtb"/>
                             <constraint firstItem="qFr-RB-tWO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DBR-UM-wXH"/>
                             <constraint firstItem="qFr-RB-tWO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="DQA-nC-jNx"/>
-                            <constraint firstItem="QMf-cO-acR" firstAttribute="top" secondItem="qFr-RB-tWO" secondAttribute="bottom" constant="55" id="LSz-In-jN4"/>
+                            <constraint firstItem="GZj-gB-eE5" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Fge-iS-3d1"/>
+                            <constraint firstItem="QMf-cO-acR" firstAttribute="top" secondItem="qFr-RB-tWO" secondAttribute="bottom" constant="233" id="LSz-In-jN4"/>
+                            <constraint firstItem="hpV-nh-Cno" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="LiN-bc-CRF"/>
+                            <constraint firstItem="hpV-nh-Cno" firstAttribute="top" secondItem="qFr-RB-tWO" secondAttribute="bottom" constant="146.5" id="PY1-hK-e5E"/>
                             <constraint firstItem="QMf-cO-acR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZfF-vl-555"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="helloButton" destination="QMf-cO-acR" id="NKS-0G-Oeb"/>
                         <outlet property="helloWorldLabel" destination="qFr-RB-tWO" id="3wJ-Pq-GrC"/>
+                        <outlet property="textOne" destination="hpV-nh-Cno" id="gt6-s4-jkg"/>
+                        <outlet property="textTwo" destination="GZj-gB-eE5" id="5km-Z2-BG4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

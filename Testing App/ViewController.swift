@@ -11,9 +11,10 @@ import UIKit
 class ViewController: UIViewController
 {
     @IBOutlet weak var helloWorldLabel: UILabel!
-    @IBOutlet weak var helloButton: UIButton!
+    @IBOutlet weak var textOne: UITextField!
+    @IBOutlet weak var textTwo: UITextField!
     
-    var counter = 0
+   
     
     override func viewDidLoad()
     {
@@ -27,16 +28,11 @@ class ViewController: UIViewController
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func helloButonPressed(_ sender: AnyObject)
+    @IBAction func buttonPressed(_ sender: AnyObject)
     {
-        counter += 1
-        print(counter)
         
-        if counter == 10
-        {
-            helloWorldLabel.text = "You tapped the button 10 times!"
-        }
     }
+    
  
 }
 
