@@ -14,7 +14,7 @@ class ViewController: UIViewController
     @IBOutlet weak var textOne: UITextField!
     @IBOutlet weak var textTwo: UITextField!
     
-   
+    var addition = true
     
     override func viewDidLoad()
     {
@@ -30,9 +30,16 @@ class ViewController: UIViewController
 
     @IBAction func buttonPressed(_ sender: AnyObject)
     {
-        helloWorldLabel.text = "\(Double(textOne.text!)! + Double(textTwo.text!)!)"
+        if addition
+        {
+            helloWorldLabel.text = "\(Double(textOne.text!)! + Double(textTwo.text!)!)"
+            addition = false
+        }
+        else
+        {
+            helloWorldLabel.text = "\(Double(textOne.text!)! - Double(textTwo.text!)!)"
+            addition = true
+        }
     }
-    
- 
 }
 
